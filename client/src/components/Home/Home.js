@@ -21,7 +21,7 @@ const Home = () => {
     const classes = useStyles();
     const query = useQuery();
     const navigate = useNavigate();
-    const page = query.get('page');
+    const page = query.get('page') || 1;
     const searchQuery = query.get('searchQuery');
     const searchPost = () => {
         if(search.trim() || tags ){
